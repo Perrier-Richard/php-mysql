@@ -1,13 +1,47 @@
 <?php
-	$recipes = [
-		['title'=>'Cassoulet','recipe'=>'Etape 1: faire jsp','author'=>'mickael.andrieu@exemple.com','is_enabled'=> true,],
-		['title'=>'Couscous','recipe'=>'Etape 3: fini','author'=>'mickael.andrieu@exemple.com','is_enabled'=> false,],
-		['title'=>'Escalopemilanaise','recipe'=>'Etape1: regarder top chef','author'=>'mathieu.nebra@exemple.com','is_enabled'=> true,]
+	$users = [
+	    [
+	        'full_name' => 'Mickaël Andrieu',
+	        'email' => 'mickael.andrieu@exemple.com',
+	        'age' => 34,
+	    ],
+	    [
+	        'full_name' => 'Mathieu Nebra',
+	        'email' => 'mathieu.nebra@exemple.com',
+	        'age' => 34,
+	    ],
+	    [
+	        'full_name' => 'Laurène Castor',
+	        'email' => 'laurene.castor@exemple.com',
+	        'age' => 28,
+	    ],
 	];
 
-	$users = [
-		['email' => 'mickael.andrieu@exemple.com', 'full_name' => 'Mickael Andrieu', 'age' => 34],
-		['email' => 'mathieu.nebra@exemple.com', 'full_name' => 'Mathieu Nebra', 'age' => 34]
+	$recipes = [
+	    [
+	        'title' => 'Cassoulet',
+	        'recipe' => '',
+	        'author' => 'mickael.andrieu@exemple.com',
+	        'is_enabled' => true,
+	    ],
+	    [
+	        'title' => 'Couscous',
+	        'recipe' => '',
+	        'author' => 'mickael.andrieu@exemple.com',
+	        'is_enabled' => false,
+	    ],
+	    [
+	        'title' => 'Escalope milanaise',
+	        'recipe' => '',
+	        'author' => 'mathieu.nebra@exemple.com',
+	        'is_enabled' => true,
+	    ],
+	    [
+	        'title' => 'Salade Romaine',
+	        'recipe' => '',
+	        'author' => 'laurene.castor@exemple.com',
+	        'is_enabled' => false,
+	    ],
 	];
 
 	function isValidRecipe(array $recipe):bool {
