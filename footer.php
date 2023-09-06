@@ -1,1 +1,1 @@
-<p>Copyright moi, tous droits réservés</p>
+<p class="bg-light" style="margin: 0 auto; padding: 20px;">Copyright moi, tous droits réservés</p>
