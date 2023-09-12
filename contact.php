@@ -16,7 +16,7 @@
 
     <?php include_once('header.php'); ?>
         <h1>Contactez nous</h1>
-        <form action="submit_contact.php" method="GET">
+        <form action="submit_contact.php" method="POST">
             <div class="mb-3">
                 <label for="email">Email</label>
                 <input type="email" name="email">
