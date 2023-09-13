@@ -1,8 +1,13 @@
 <?php
+	session_start();
+
 	if(isset($_POST['email']) && isset($_POST['password'])){
 		foreach($users as $user){
 			if($user['password'] == $_POST['password'] && $user['email'] == $_POST['email']){
-				$loggedUser = ['email' => $user['email'], 'full_name' => $user['full_name'], 'age' => $user['age']];
+				$_SESSION['email'] = $user['email'];
+				$_SESSION['password'] = $user['password'];
+				$_SESSION['full_name'] = $user['full_name'];
+				$loggedUser = ['email' => $user['email'],];
 			}
 			else{
 				$errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)', $_POST['email'], $_POST['password']);
@@ -10,6 +15,7 @@
 		}
 	}
 ?>
+
 
 <?php if(!isset($loggedUser)): ?>
 <form action="index.php" method="POST">
@@ -33,6 +39,6 @@
 
 <?php else: ?>
 	<div class="alert alert-success" role="alert">
-		Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
+		Bonjour <?php echo $_SESSION['email']; ?> et bienvenue sur le site !
 	</div>
 <?php endif; ?>
