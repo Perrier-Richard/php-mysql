@@ -1,3 +1,7 @@
+<?php
+    include_once('mysql.php');
+?>
+
 <!-- index.php -->
 <!DOCTYPE html>
 <html>
@@ -24,8 +28,11 @@
 
         <h1>Site de recettes</h1>
 
-        <?php if(isset($loggedUser)): ?>
-            <?php foreach(getRecipes($recipes) as $recipe) : ?>
+        <?php if(isset($loggedUser)):
+            $recipesStatement = $db->prepare("SELECT * FROM recipes");
+            $recipesStatement->execute();
+            $recipes = $recipesStatement->fetchAll();
+            foreach($recipes as $recipe) : ?>
                 <article>
                     <h3><?php echo $recipe['title']; ?></h3>
                     <div><?php echo $recipe['recipe']; ?></div>
