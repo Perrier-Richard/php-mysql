@@ -24,12 +24,12 @@
             include_once('functions.php');
         ?>
 
-        <?php include_once('login.php'); ?>
-
         <h1>Site de recettes</h1>
 
+        <?php include_once('login.php'); ?>
+
         <?php if(isset($loggedUser)):
-            $recipesStatement = $db->prepare("SELECT * FROM recipes");
+            $recipesStatement = $db->prepare("SELECT * FROM recipes WHERE is_enabled = 1");
             $recipesStatement->execute();
             $recipes = $recipesStatement->fetchAll();
             foreach($recipes as $recipe) : ?>

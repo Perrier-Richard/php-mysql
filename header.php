@@ -13,6 +13,12 @@
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="recipe.php">Recette</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="deconnexion.php">Deconnexion</a>
+        </li> 
       </ul>
     </div>
   </div>
