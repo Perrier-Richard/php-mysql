@@ -18,14 +18,15 @@
         <h1>Ajouter une recette</h1>
         <form action="submit_recipe.php" method="POST">
             <div class="mb-3">
-                <label for="text" class="form-label">Titre</label>
+                <label for="text" class="form-label">Titre de la recette</label>
                 <input type="text" class="form-control" id="title" name="title" aria-describedby="title-help">
+                <div id="title-help" class="form-text">Choisissez un titre percutant !.</div>
             </div>
             <div class="mb-3">
-                <label for="recipe" class="form-label">Votre recette</label>
-                <textarea class="form-control" placeholder="Ecriver les étapes de votre recette" id="recipe" name="recipe"></textarea>
+                <label for="recipe" class="form-label">Description de la recette</label>
+                <textarea class="form-control" placeholder="Seulement du contenu vous appartenant ou libre de droits" id="recipe" name="recipe"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Publier</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
         <br />
     </div>

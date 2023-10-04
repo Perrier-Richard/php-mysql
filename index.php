@@ -37,6 +37,11 @@
                     <h3><?php echo $recipe['title']; ?></h3>
                     <div><?php echo $recipe['recipe']; ?></div>
                     <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
+                    <?php 
+                        if($recipe['author'] == $_SESSION['email']){
+                            echo '<a href="update.php?id='.$recipe['recipe_id'].'">Modifier</a>';
+                        }
+                    ?>
                 </article>
             <?php endforeach; ?>
         <?php endif; ?>

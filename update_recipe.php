@@ -43,12 +43,12 @@
         ?>
 
         <?php
-            $recipesStatement = $db->prepare("INSERT INTO recipes (recipe_id, title, recipe, author, is_enabled) VALUES ('0', ?, ?, ?, 1)");
-            $recipesStatement->execute(array($_POST['title'], $_POST['recipe'], $_SESSION['email']))
+            $recipesStatement = $db->prepare("UPDATE recipes SET title = ?, recipe = ? WHERE recipe_id = ?");
+            $recipesStatement->execute(array($_POST['title'], $_POST['recipe'], $_POST['id']))
             or die(print_r($db->errorInfo()));
         ?>
 
-        <h1>Recette ajoutée avec succès !</h1>
+        <h1>Recette modifiée avec succès !</h1>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $_POST['title']; ?></h5>
