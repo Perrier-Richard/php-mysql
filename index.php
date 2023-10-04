@@ -40,6 +40,7 @@
                     <?php 
                         if($recipe['author'] == $_SESSION['email']){
                             echo '<a href="update.php?id='.$recipe['recipe_id'].'">Modifier</a>';
+                            echo '<a href="delete_recipe.php?id='.$recipe['recipe_id'].'">Supprimer</a>';
                         }
                     ?>
                 </article>
