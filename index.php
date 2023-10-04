@@ -34,7 +34,9 @@
             $recipes = $recipesStatement->fetchAll();
             foreach($recipes as $recipe) : ?>
                 <article>
-                    <h3><?php echo $recipe['title']; ?></h3>
+                    <?php echo '<a  href="comment.php?id='.$recipe['recipe_id'].'">'; ?>
+                        <h3><?php echo $recipe['title']; ?></h3>
+                    </a>
                     <div><?php echo $recipe['recipe']; ?></div>
                     <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
                     <?php 
